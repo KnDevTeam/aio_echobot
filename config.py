@@ -5,8 +5,9 @@ APP_URL = "https://aio-echo-bot.herokuapp.com/" + API_TOKEN
 
 # webhook settings
 WEBHOOK_HOST = 'https://aio-echo-bot.herokuapp.com/'
-WEBHOOK_PATH = '/webhook'
-WEBHOOK_URL = f"{WEBHOOK_HOST}{WEBHOOK_PATH}"
+#WEBHOOK_PATH = '/path/to/api'
+#WEBHOOK_URL = f"{WEBHOOK_HOST}{WEBHOOK_PATH}"
+WEBHOOK_URL = "https://aio-echo-bot.herokuapp.com/" + API_TOKEN
 
 # webserver settings
 WEBAPP_HOST = '0.0.0.0'  # or ip
