@@ -5,8 +5,18 @@ from aiogram.contrib.middlewares.logging import LoggingMiddleware
 from aiogram.dispatcher import Dispatcher
 from aiogram.dispatcher.webhook import SendMessage
 from aiogram.utils.executor import start_webhook
-from config import *
 
+
+API_TOKEN = '5666366626:AAFYT9yDcGExQz5ILdLCGPEg99RF8X7dZNg'
+
+# webhook settings
+WEBHOOK_HOST = 'https://aio-echo-bot.herokuapp.com'
+WEBHOOK_PATH = '/webhook'
+WEBHOOK_URL = f"{WEBHOOK_HOST}{WEBHOOK_PATH}"
+
+# webserver settings
+WEBAPP_HOST = '0.0.0.0'  # or ip
+WEBAPP_PORT = 443
 
 logging.basicConfig(level=logging.INFO)
 
@@ -51,6 +61,6 @@ if __name__ == '__main__':
         on_startup=on_startup,
         on_shutdown=on_shutdown,
         skip_updates=True,
-        host=WEBAPP_HOST, # done
-        port=WEBAPP_PORT, # done
+        host=WEBAPP_HOST,
+        port=WEBAPP_PORT,
     )
